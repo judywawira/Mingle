@@ -1,6 +1,9 @@
-<p>Customize this format here: <tt>ddoc.evently.items._changes.mustache</tt></p>
 <h3>Recent Messages</h3>
-<ul>
+<span id="dummy4player"></span>
+<script type="text/javascript">
+  YAHOO.MediaPlayer.addTracks(document.getElementById('dummy4player'),null,true);
+</script>
+<ul id="#itemlist">
   {{#items}}
     <li>
       <div class="avatar">
@@ -9,10 +12,11 @@
           {{nickname}}
         </div>
       </div>
-      <p>{{message}}</p>
+      <p id="{{id}}">{{{message}}}</p>
+      <script type="text/javascript">
+        YAHOO.MediaPlayer.addTracks(document.getElementById('{{id}}'),null,false);
+      </script>
       <div style="clear:left;"></div>
     </li>
   {{/items}}
 </ul>
-<p><em>Protip:</em> If you setup continuous replication between this database and a remote one, this list will reflect remote changes in near real-time.</p>
-<p>This would be a good place to add pagination.</p>
