@@ -8,7 +8,7 @@
   <body>
     <div id="account"></div>
 
-    <h1>Mingle</h1>
+    <h1><img width=32 height=32 src="img/mingle.gif" alt="logo"> Mingle</h1>
 
     <div id="profile"></div>
     <div id="items"></div>
@@ -18,18 +18,17 @@
       <p>Read more about it <a href="javascript:alert('Not yet')">here</a>.</p>
     </div>
   </body>
-  <script type="text/javascript">
-    var YMPParams = { autoadvance:false };
-  </script>
-  <script type="text/javascript" src="http://webplayer.yahooapis.com/player-beta.js"></script>
-  <script src="js/twitter-text.js"></script>
   <script src="vendor/couchapp/loader.js"></script>
+  <script src="js/twitter-text.js"></script>
   <script type="text/javascript" charset="utf-8">
+    // CHANGE THIS if db or design doc are NOT called mingle. Kludge explained at
+    // http://permalink.gmane.org/gmane.comp.db.couchdb.couchapp.general/488
+    var opts = {db:"mingle",design:"mingle"};
     $.couch.app(function(app) {
       $("#account").evently("account", app);
       $("#profile").evently("profile", app);
       $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
       $("#items").evently("items", app);
-    });
+    },opts);
   </script>
 </html>

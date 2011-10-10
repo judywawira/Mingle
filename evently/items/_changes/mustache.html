@@ -1,8 +1,5 @@
 <h3>Recent Messages</h3>
 <span id="dummy4player"></span>
-<script type="text/javascript">
-  YAHOO.MediaPlayer.addTracks(document.getElementById('dummy4player'),null,true);
-</script>
 <ul id="#itemlist">
   {{#items}}
     <li>
@@ -12,10 +9,7 @@
           {{nickname}}
         </div>
       </div>
-      <p id="{{id}}">{{{message}}}</p>
-      <script type="text/javascript">
-        YAHOO.MediaPlayer.addTracks(document.getElementById('{{id}}'),null,false);
-      </script>
+      <p>{{{message}}}</p>
       <div style="clear:left;"></div>
     </li>
   {{/items}}
