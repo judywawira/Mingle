@@ -13,9 +13,9 @@ The main differences are:
   and you [setup](https://github.com/iriscouch/browserid_couchdb/commit/44a8deacdda6e2049cc37fc66e7360166b22cc76#L0R45)
  `/_config/browserid/hash_secret`, _Mingle_ becomes a _fairly anonymous_ application:
 
-    * More about how anonymous you are _exactly_ - [here](XXX).
+    * More about how anonymous you are _exactly_ - [here](https://github.com/thedod/Mingle/wiki/How-anonymous-is-fairly-anonymous).
 
     * More about what this is good _for_ (and how things can be improved) -
       [here](http://couchappsec.couch.it/Anonymous_accountability). 
 
-### For documentation - [see the wiki](XXX)
+### For documentation - [see the wiki](https://github.com/thedod/Mingle/wiki/)
