@@ -1,3 +1,5 @@
+### See [demo](http://mingle.thedod.iriscouch.com/).
+
 _Mingle_ is pretty similar to what [couchapp generate](http://www.couchapp.org/page/getting-started)
 produces (i.e. a minimalistic chat application).
 
