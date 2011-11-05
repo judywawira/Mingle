@@ -1,4 +1,4 @@
-### See [demo](http://mingle.thedod.iriscouch.com/).
+### See [demo](https://thedod.iriscouch.com/mingle/_design/mingle/_rewrite/).
 
 _Mingle_ is pretty similar to what [couchapp generate](http://www.couchapp.org/page/getting-started)
 produces (i.e. a minimalistic chat application).
