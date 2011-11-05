@@ -70,6 +70,8 @@ div.avatar img {
   height : 40px;
 }
 
+.hidden { display:none }
+
 #items ul {
   list-style: none;
 }

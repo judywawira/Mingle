@@ -1,3 +1,6 @@
 [submodule "deps/twitter-text-js"]
 	path = deps/twitter-text-js
 	url = https://github.com/twitter/twitter-text-js.git
+[submodule "deps/domModal.jquery.js"]
+	path = deps/domModal.jquery.js
+	url = https://github.com/oomlaut/domModal.jquery.js.git

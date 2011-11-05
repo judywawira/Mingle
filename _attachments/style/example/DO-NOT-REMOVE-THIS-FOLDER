@@ -1,0 +1,2 @@
+For some strange reason, domModal.css takes the close-button image url from the example.
+In order not to touch the submodule's code in github, we preserve this weird folder structure.
