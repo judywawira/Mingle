@@ -1,4 +1,5 @@
-<span>Welcome 
-<a target="_new" href="/_utils/document.html?{{auth_db}}/org.couchdb.user%3A{{uri_name}}">{{name}}</a>! 
-<a href="#logout">Logout?</a>
+<span>Logged in as 
+<input value="{{name}}" readonly="readonly" onclick="this.select()"> 
+<a id="new-profile" class="hidden" href="#reset-profile">New profile</a>
+<a href="#logout">Logout</a>
 </span>

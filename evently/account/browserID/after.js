@@ -25,6 +25,7 @@ function() {
     } else {
       // something went wrong!  the user isn't logged in.
       alert("BrowserID login failed");
+      $('#account').trigger('_init'); // Show login button again
     }
   });
 }

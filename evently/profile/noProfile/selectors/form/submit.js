@@ -3,14 +3,20 @@ function() {
   
   // TODO this can be cleaned up with docForm?
   // it still needs the workflow to edit an existing profile
-  var name = $("input[name=userCtxName]",this).val();
+  var name = $('#userCtxName').val(),
+      nickname = $('#nickname').val().trim();
+  if (!nickname) {
+    alert('You need to have a nickname, mate');
+    $('#nickname').focus();
+    return false;
+  }
   var newProfile = {
     rand : Math.random().toString(), 
-    nickname : $("input[name=nickname]",this).val(),
-    //email : $("input[name=email]",this).val(),
+    nickname : nickname,
+    //We put a value in email because other apps might expect it
     email : "nono@yo.biz",
     url : $("input[name=url]",this).val()
-  }, widget = $(this);
+  };
 
   // setup gravatar_url
   if (md5) {
@@ -25,9 +31,7 @@ function() {
         userDoc["couch.app.profile"] = newProfile;
         db.saveDoc(userDoc, {
           success : function() {
-            newProfile.name = userDoc.name;
-            $$(widget).profile = newProfile;
-            widget.trigger("profileReady", [newProfile]);
+            $('#account').trigger("_init");
           }
         });
       }
