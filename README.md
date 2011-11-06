@@ -1,23 +1,27 @@
-### See [demo](https://thedod.iriscouch.com/mingle/_design/mingle/_rewrite/).
+## ![logo](http://dod.kicks-ass.org:5984/img/mingle.gif) Mingle
 
-_Mingle_ is pretty similar to what [couchapp generate](http://www.couchapp.org/page/getting-started)
-produces (i.e. a minimalistic chat application).
+### _"[Join us](https://thedod.iriscouch.com/mingle/_design/mingle/_rewrite/). **Be** a stranger" <sup><del>TM</del></sup>_
 
-The main differences are:
+_Mingle_ is a [CouchApp](http://couchapp.org) that experiments with _"Asocial Networking"_.
+The goal is to minimize ability to data-mine nformation regarding the user population or subsets of it,
+without sacrificing public accessability. Hopefully, this will be achieved by:
 
-* Users login via [BrowserID](https://browserid.org) (so you can use this as boilerplate code
-  if you want BrowserID support).
+* Maintaining [anonyomous accountability](http://couchappsec.couch.it/Anonymous_accountability)
+as much as possible (at the moment you're only
+"[fairly anonymous](https://github.com/thedod/Mingle/wiki/How-anonymous-is-fairly-anonymous)")
 
-* Security is a bit more hardened. E.g. - there _is_ a `validate_doc_update` function :)
+* Keeping the content publicly available, but managing and sharing relations (follow / like / tag / etc.) out of band:
 
-* If your CouchDB server has an up to date version of the
-  [BrowserID plugin](https://github.com/iriscouch/browserid_couchdb/),
-  and you [setup](https://github.com/iriscouch/browserid_couchdb/commit/44a8deacdda6e2049cc37fc66e7360166b22cc76#L0R45)
- `/_config/browserid/hash_secret`, _Mingle_ becomes a _fairly anonymous_ application:
+  * Locally inside the browser
 
-    * More about how anonymous you are _exactly_ - [here](https://github.com/thedod/Mingle/wiki/How-anonymous-is-fairly-anonymous).
+  * Via private text mediums (email, IM, etc.)
 
-    * More about what this is good _for_ (and how things can be improved) -
-      [here](http://couchappsec.couch.it/Anonymous_accountability). 
+  * Publicly (on blogs and sites) if a user wishes to do so
+
+  * Eventually - integration with external and deniable storage mechanisms
+    (anything from [pastebin](http://pastebin.com) to [refuge.io](http://refuge.io))
+
+At the moment, only the first goal (anonymous accountability) was [fairly] achieved.
+Feel free to [help](https://github.com/thedod/Mingle/wiki/To-do).
 
 ### For documentation - [see the wiki](https://github.com/thedod/Mingle/wiki/)
