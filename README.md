@@ -3,7 +3,7 @@
 ### _"[Join us](https://thedod.iriscouch.com/mingle/_design/mingle/_rewrite/). **Be** a stranger" <sup><del>TM</del></sup>_
 
 _Mingle_ is a [CouchApp](http://couchapp.org) that experiments with _"Asocial Networking"_.
-The goal is to minimize ability to data-mine nformation regarding the user population or subsets of it,
+The goal is to minimize ability to data-mine information regarding the user population or subsets of it,
 without sacrificing public accessability. Hopefully, this will be achieved by:
 
 * Maintaining [anonyomous accountability](http://couchappsec.couch.it/Anonymous_accountability)
