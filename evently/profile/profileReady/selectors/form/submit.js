@@ -5,7 +5,7 @@ function() {
   if (!fdoc.message) {
     return false;
   }
-  form.attr('disabled','disabled');
+  $('#message').attr('disabled','disabled');
   fdoc.profile = $$('#profile').profile;
   fdoc.type = 'message';
   fdoc.created_at = new Date();
@@ -13,10 +13,14 @@ function() {
   $$(this).app.db.saveDoc(fdoc, {
     success : function() {
       form[0].reset();
-      form.removeAttr('disabled');
+      $('#message').removeAttr('disabled');
     },
-    error : function() {
-      form.removeAttr('disabled');
+    error : function(stat,err,reason) {
+      if (stat===403) { // session expired
+        $('#account').trigger('_init');
+      }
+      alert("Error "+stat+": "+err+"\n"+reason);
+      $('#message').removeAttr('disabled');
     }
   });
   return false;
