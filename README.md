@@ -1,6 +1,6 @@
 ## ![logo](http://dod.kicks-ass.org:5984/img/mingle.gif) Mingle
 
-### _"[Join us](https://thedod.iriscouch.com/mingle/_design/mingle/_rewrite/). **Be** a stranger" <sup><del>TM</del></sup>_
+### <em>"[Join us](https://thedod.iriscouch.com/mingle/_design/mingle/_rewrite/). **Be** a stranger" <sup><del>TM</del></sup></em>
 
 _Mingle_ is a [CouchApp](http://couchapp.org) that experiments with _"Asocial Networking"_.
 The goal is to minimize ability to data-mine information regarding the user population or subsets of it,
@@ -25,3 +25,5 @@ At the moment, only the first goal (anonymous accountability) was [fairly] achie
 Feel free to [help](https://github.com/thedod/Mingle/wiki/To-do).
 
 ### For documentation - [see the wiki](https://github.com/thedod/Mingle/wiki/)
+
+[![Flattr Mingle](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=thedod&url=https://github.com/thedod/Mingle&title=Mingle&language=en_GB&tags=github&category=software) 
