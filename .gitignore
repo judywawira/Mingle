@@ -3,3 +3,6 @@
 *.bak
 *.pidaproject
 .couchapprc
+customize/*
+!customize/README.md
+!customize/example

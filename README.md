@@ -4,9 +4,9 @@
 
 _Mingle_ is a [CouchApp](http://couchapp.org) that experiments with _"Asocial Networking"_.
 The goal is to minimize ability to data-mine information regarding the user population or subsets of it,
-without sacrificing public accessability. Hopefully, this will be achieved by:
+without sacrificing public accessibility. Hopefully, this will be achieved by:
 
-* Maintaining [anonyomous accountability](http://couchappsec.couch.it/Anonymous_accountability)
+* Maintaining [anonymous accountability](http://couchappsec.couch.it/Anonymous_accountability)
 as much as possible (at the moment you're only
 "[fairly anonymous](https://github.com/thedod/Mingle/wiki/How-anonymous-is-fairly-anonymous)")
 
