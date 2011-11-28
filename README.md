@@ -26,4 +26,4 @@ Feel free to [help](https://github.com/thedod/Mingle/wiki/To-do).
 
 ### For documentation - [see the wiki](https://github.com/thedod/Mingle/wiki/)
 
-[![Flattr Mingle](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=thedod&url=https://github.com/thedod/Mingle&title=Mingle&language=en_GB&tags=github&category=software) 
+[![Flattr Mingle](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/433445/Mingle-an-asocial-network) 
