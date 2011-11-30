@@ -65,7 +65,7 @@
       if (location.protocol.toLowerCase()==="https:") {
           $('#onlyssl').hide();
           $('#replicate').click(function() {
-              var urlpref=
+              var urlpref='https://'+$('#user').attr('value')+':',
                   urlsuff='@'+$('#host').attr('value')+'/'+$('#db').attr('value')+'/';
               if (confirm('Continuously replicate to "'+urlpref+'****'+urlsuff+'"?')) {
                 // don't remember what js lib serializes to json :s. Later
