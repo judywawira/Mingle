@@ -76,7 +76,8 @@
                   type:"POST",dataType:"json",contentType:"application/json",
                   url:"/_replicate", data:data,
                   complete:function(res,stat){
-                      alert('Replication '+stat+': '+res.responseText);
+                      // Oops, responseText contains the plaintext password. Grrr
+                      alert('Replication '+stat+': '+res.responseText.replace(/\/\/.*:.*@/,'//***:***@'));
                   }
                 });
               }
