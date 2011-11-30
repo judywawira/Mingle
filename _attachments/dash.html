@@ -35,18 +35,21 @@
          (if you don't know <em>this</em> server's owner, <strong>don't</strong> disclose them here):</p>
       replicate <code>mingle</code> to
       https://<input id="user" name="user" size="10" value="you">:<input size="10" type="password" id="password"
-        name="password" placeholder="password">@<input id="host" name="host" value="yourserver.iriscouch.com"
+        name="password" placeholder="password">@<input id="host" name="host" value="some.iriscouch.com"
       >/<input size="10" id="db" name="db" value="mingle">/
       <br>
-      <button id="replicate">Replicate</button>
+      <input type="checkbox" id="cancel_replication">Cancel an existing replication
+      <button id="replicate">Go</button>
       <br>
       Notes on replication:
       <ul>
         <li>Traget db should exist and contain the <code>_design/mingle</code>
-            (an optionally <code>_design/customize</code>) docs. Replication via this page should filter out code
+            (an optionally <code>_design/customize</code>) docs.<br>
+            Replication via this page should filter out code
             (but don't trust this server. We might be evil).</li>
         <li>The right way to do this is via <em>pull</em> replication, but at the moment there's a bug
-            that kills continuous pull replications, so this patch is only relevant for a signle person
+            that kills continuous pull replications.<br>
+            This patch is only relevant for a signle person
             (or a group of close friends) owning all servers.</li>
       </ul>
     </div>
@@ -62,15 +65,16 @@
       if (location.protocol.toLowerCase()==="https:") {
           $('#onlyssl').hide();
           $('#replicate').click(function() {
-              var urlpref='https://'+$('#user').attr('value')+':',
+              var urlpref=
                   urlsuff='@'+$('#host').attr('value')+'/'+$('#db').attr('value')+'/';
               if (confirm('Continuously replicate to "'+urlpref+'****'+urlsuff+'"?')) {
+                // don't remember what js lib serializes to json :s. Later
+                var data = '{"source":"mingle","continuous":true,"filter":"mingle/nocode",';
+                if ($('#cancel_replication').attr('checked')) { data += '"cancel":true,'; };
+                data += '"target":"'+urlpref+$('#password').attr('value')+urlsuff+'"}';
                 $.ajax({
                   type:"POST",dataType:"json",contentType:"application/json",
-                  url:"/_replicate",
-                  data: // need to serialize this better. Later
-                    '{"source":"mingle","continuous":true,"filter":"mingle/nocode",'+
-                    '"target":"'+urlpref+$('#password').attr('value')+urlsuff+'"}',
+                  url:"/_replicate", data:data,
                   complete:function(res,stat){
                       alert('Replication '+stat+': '+res.responseText);
                   }
