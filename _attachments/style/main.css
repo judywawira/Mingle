@@ -58,27 +58,27 @@ form {
   background-color:#ddd;  
 }
 
-div.avatar {
+div.avatar { width:60px; height:60px }
+div.avatar-large { width:120px; height:120px }
+div.avatar, div.avatar-large {
   padding:2px;
   padding-bottom:0;
   margin-right:4px;
   float:left;
   font-size:0.78em;
-  width : 60px;
-  height : 60px;
   text-align: center;
 }
 
-div.avatar .name {
+div.avatar .name, div.avatar-large .name {
   padding-top:2px;
 }
 
-div.avatar img {
+div.avatar img, div.avatar img {
   margin:0 auto;
   padding:0;
-  width : 40px;
-  height : 40px;
 }
+div.avatar img { width:40px; height:40px }
+div.avatar-large img { width:100px; height:100px }
 
 .hidden { display:none }
 
